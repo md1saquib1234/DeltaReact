@@ -2,6 +2,7 @@ import "./App.css";
 //import
 
 import ProductTab from "./ProductTab.jsx";
+import Button from "./Button"
 
 
 
@@ -11,8 +12,7 @@ function App() {
   
   return (
     <>
-    <h2>Blockbuster Deals | Shop Now</h2>
-    <ProductTab />
+    <Button / >
     </>
   
   );
