@@ -5,22 +5,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import "./InfoBox.css";
 
-export default function InfoBox() {
+export default function InfoBox({info}) {
   const INIT_URL = "https://images.unsplash.com/photo-1580049904360-a9c3b79f86ff?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  let info = {
-    city: "Bangalore",
-    feelsLike: 27.3,
-    humidity: 28,
-    temp: 28.4,
-    tempMax: 28.4, 
-    tempMin: 28.4,
-    weather: "overcast clouds",
-  }
+  
 
   return (
     <div className="infoBox">
       <div>
-    <h1>WeatherInfo - {info.weather}</h1>
+    <div className="cardContainer">
      <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
@@ -32,6 +24,7 @@ export default function InfoBox() {
           {info.city}
         </Typography>
         <Typography variant="body2" sx={{ color: 'secondary'}} component={"span"}>
+          
          <p>Temperature = {info.temp}&deg;C</p>
          <p>Humidity = {info.humidity}</p>
          <p>Min Temp = {info.tempMin}&deg;C</p>
@@ -41,6 +34,7 @@ export default function InfoBox() {
         </Typography>
       </CardContent>
     </Card>
+    </div>
     </div>
     </div>
 
